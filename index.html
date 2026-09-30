@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Task Manager</title>
+  <link rel="stylesheet" href="style/app.css" />
+</head>
+<body>
+
+  <header>
+    <h1>My Tasks</h1>
+    <p>A simple task manager application</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>New Task</h2>
+      <form id="taskForm">
+        <div class="form-grid">
+          <label>Title
+            <input id="txtTitle" required placeholder="Pay the bills" />
+          </label>
+
+          <label>Description
+            <input id="txtDescription" placeholder="Electricity and water" />
+          </label>
+
+          <label>Color
+            <input id="selColor" type="color" value="#ffcc00" />
+          </label>
+
+          <label>Date
+            <input id="selDate" type="date" />
+          </label>
+
+          <label>Status
+            <select id="selStatus">
+              <option value="New">New</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Completed">Completed</option>
+            </select>
+          </label>
+
+          <label>Budget
+            <input id="numBudget" type="number" step="0.01" placeholder="100.00" />
+          </label>
+        </div>
+
+        <button type="button" id="btnSave">Save Task</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Task List</h2>
+      <div id="list" class="list"></div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="scripts/task.js"></script>
+  <script src="scripts/app.js"></script>
+
+</body>
+</html>
