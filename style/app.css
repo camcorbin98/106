@@ -9,7 +9,6 @@
   --color-primary: #4656c8;
   --color-primary-dark: #303f9f;
   --color-accent: #00a6a6;
-
   --color-surface: #ffffff;
   --color-background: #eef2f8;
   --color-text: #263248;
@@ -230,6 +229,39 @@ button:focus-visible {
   transform: translateY(-2px);
 }
 
+/* ---- Task List Header ---- */
+.task-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.task-list-header h2 {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+/* ---- Delete All Button ---- */
+#btnDeleteAll {
+  background-color: #b42332;
+  color: white;
+  padding: 11px 20px;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+#btnDeleteAll:hover {
+  background-color: #8f1d29;
+  transform: translateY(-2px);
+}
+
+#btnDeleteAll:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 /* ---- Task List ---- */
 .list {
   display: flex;
@@ -244,13 +276,11 @@ button:focus-visible {
   justify-content: space-between;
   gap: 18px;
   flex-wrap: wrap;
-
   background-color: #fbfcff;
   border: 1px solid var(--color-border);
   border-left: 6px solid var(--color-primary);
   border-radius: 12px;
   padding: 20px;
-
   transition: all 0.2s ease;
 }
 
@@ -303,7 +333,7 @@ button:focus-visible {
   color: var(--color-text-muted);
 }
 
-/* ---- Delete Button ---- */
+/* ---- Individual Delete Button ---- */
 .btn-delete {
   background-color: #fff0f0;
   color: #d64545;
@@ -368,12 +398,15 @@ button:focus-visible {
     padding: 16px;
   }
 
-  #btnSave {
+  #btnSave,
+  #btnDeleteAll,
+  .btn-delete {
     width: 100%;
   }
 
-  .btn-delete {
-    width: 100%;
+  .task-list-header {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 

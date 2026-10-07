@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,11 +17,13 @@
   <main>
     <section class="card">
       <h2>New Task</h2>
+
       <div class="filters">
-        <button id="btnAll">All</button>
-        <button id="btnDone">Completed</button>
-        <button id="btnTodo">Pending</button>
+        <button type="button" id="btnAll">All</button>
+        <button type="button" id="btnDone">Completed</button>
+        <button type="button" id="btnTodo">Pending</button>
       </div>
+
       <form id="taskForm">
         <div class="form-grid">
           <label>Title
@@ -57,7 +60,13 @@
     </section>
 
     <section class="card">
-      <h2>Task List</h2>
+      <div class="task-list-header">
+        <h2>Task List</h2>
+        <button type="button" id="btnDeleteAll">
+          Delete All My Tasks
+        </button>
+      </div>
+
       <div id="list" class="list"></div>
     </section>
   </main>
